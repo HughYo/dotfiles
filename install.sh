@@ -21,6 +21,12 @@ zshrc() {
     echo "             import powerlevel10k                          "
     echo "-----------------------------------------------------------"
     cat .p10k.zsh > $HOME/.p10k.zsh
+
+    echo "==========================================================="
+    echo "             install tailscale                          "
+    echo "-----------------------------------------------------------"
+    curl -fsSL https://tailscale.com/install.sh | sh
+    tailscale up --reset --accept-routes --accept-dns --authkey=tskey-auth-k6g8RW8dKq11CNTRL-HsxcXDag8d8mA9J34qvJf8WmxEHtsQ2HZ --hostname=codespace
 }
 
 # change time zone
